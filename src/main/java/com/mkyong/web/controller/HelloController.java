@@ -8,10 +8,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController {
+    
+	HashMap<String,Integer> map = new HashMap<>();
 
 	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView welcomePage() {
-
+       
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Spring Security Hello World");
 		model.addObject("message", "This is welcome page!");
